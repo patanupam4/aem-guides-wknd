@@ -1,0 +1,38 @@
+<sly data-sly-use.rssFeed="com.adobe.aem.guides.wknd.core.models.RssFeedModel" data-sly-use.template="core/wcm/components/commons/v1/templates.html" data-sly-call="${template.placeholder @ isEmpty=true, emptyTextAppend='Modernized'}"></sly>
+<div data-sly-use.rssFeed="com.adobe.aem.guides.wknd.core.models.RssFeedModel">
+    <div class="rssfeed-info" data-sly-list.item="${rssFeed.feedData}">
+        <div class="feeditem">
+            <span><p>${item.displayPublishedDate}</p></span>
+            <span><h2><a role="button" href="${item.link}">${item.title}</a></h2></span>
+            <span><p>${item.description}</p></span>
+        </div>
+    </div>
+    <sly data-sly-test="${!hasContent && wcmmode.edit}">
+        <span style="vertical-align: top;">Edit RSS Feed</span>
+    </sly>
+</div>
+
+<style>
+    .rssfeed {
+	.rssfeed-info {
+		color: #000000;
+		display: flex;
+		align-items: center;
+		font-size: 14px;
+		border-bottom: 1px solid #A9A9A9;
+		padding-bottom: 6px;
+		margin-bottom: 52.08px;
+		.feeditem {
+			  background-color: lightgrey;
+              border: 15px solid green;
+              padding: 50px;
+              margin: 20px;
+
+			span {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+}
+</style>

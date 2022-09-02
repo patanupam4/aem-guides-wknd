@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    cq:dialogMode="floating"
+	cq:disableTargeting="{Boolean}true"
+    cq:lastReplicated="{Date}2014-08-11T13:00:30.058-07:00"
+    cq:lastReplicatedBy="admin"
+    cq:lastReplicationAction="Activate"
+    jcr:mixinTypes="[cq:ReplicationStatus]"
+    jcr:primaryType="cq:EditConfig">
+    <cq:listeners
+        jcr:primaryType="cq:EditListenersConfig"
+        aftercopy="REFRESH_SELF"
+        afteredit="REFRESH_SELF"
+        afterinsert="REFRESH_SELF"/>
+</jcr:root>
