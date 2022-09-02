@@ -2,6 +2,7 @@
 
 http://localhost:4502/content/mysite/us/en/rss-test.html?wcmmode=disabled
 
+* Setup Prerequisite - **Service Pack -10** & **Core Components-2.17.12**
 * The **RSS Feed Page** is part of the project (_/content/mysite/us/en/rss-test_) and has been created using the OOTB We Retail Website.
 * The Manual fallback content is also authored (Dummy Content) if Rss Feed URL is invalid, more data can be added to the Multi field on the component
 * Number of items needed to be displayed in the component is configurable
