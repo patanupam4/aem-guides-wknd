@@ -74,11 +74,10 @@ public class FeedFetchServiceImpl implements FeedFetchService {
                         try {
                             rssFeedBean.setDisplayPublishedDate(dateFormat(item.getPublishedDate()));
                         } catch (ParseException e) {
-                            log.error("Parsing exception while String to Date at : ", e);
+                            log.error("Parsing exception while dateFormat - String to Date at : ", e);
                         }
                         rssFeedBeans.add(rssFeedBean);
                     });
-                    log.info("rssFeedBean size : {}", rssFeedBeans.size());
                     return rssFeedBeans;
                 }
             }  catch (JAXBException | MalformedURLException e) {
@@ -102,7 +101,7 @@ public class FeedFetchServiceImpl implements FeedFetchService {
             connection.connect();
             return connection.getResponseCode() == 200;
         } catch (IOException e) {
-            log.error("IOException : ", e);
+            log.error("IOException while validating URL : ", e);
             return false;
         }
     }
