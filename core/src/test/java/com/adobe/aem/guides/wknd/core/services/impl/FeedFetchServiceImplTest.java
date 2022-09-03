@@ -6,7 +6,6 @@ import com.adobe.aem.guides.wknd.core.beans.Item;
 import com.adobe.aem.guides.wknd.core.beans.Rss;
 import io.wcm.testing.mock.aem.junit5.AemContext;
 import io.wcm.testing.mock.aem.junit5.AemContextExtension;
-import junitx.util.PrivateAccessor;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.servlethelpers.MockSlingHttpServletRequest;
 import org.junit.jupiter.api.BeforeEach;
@@ -60,8 +59,6 @@ import static org.mockito.Mockito.when;
     }
 
     @Test void getFeedData() throws NoSuchFieldException {
-        boolean isEnabled = true;
-        PrivateAccessor.setField(this.feedFetchService, "isEnabled", isEnabled);
         try (MockedStatic<JAXBContext> utilities = Mockito.mockStatic(JAXBContext.class)) {
             utilities.when(() -> JAXBContext.newInstance(Rss.class)).thenReturn(jaxbContext);
             when(jaxbContext.createUnmarshaller()).thenReturn(unmarshaller);
@@ -77,8 +74,6 @@ import static org.mockito.Mockito.when;
     }
 
     @Test void getFeedDataWithParseException() throws NoSuchFieldException {
-        boolean isEnabled = true;
-        PrivateAccessor.setField(this.feedFetchService, "isEnabled", isEnabled);
         try (MockedStatic<JAXBContext> utilities = Mockito.mockStatic(JAXBContext.class)) {
             utilities.when(() -> JAXBContext.newInstance(Rss.class)).thenReturn(jaxbContext);
             when(jaxbContext.createUnmarshaller()).thenReturn(unmarshaller);
@@ -94,8 +89,6 @@ import static org.mockito.Mockito.when;
     }
 
     @Test void getFeedDataWIthJaxbException() throws NoSuchFieldException {
-        boolean isEnabled = true;
-        PrivateAccessor.setField(this.feedFetchService, "isEnabled", isEnabled);
         try (MockedStatic<JAXBContext> utilities = Mockito.mockStatic(JAXBContext.class)) {
             utilities.when(() -> JAXBContext.newInstance(Rss.class)).thenReturn(jaxbContext);
             when(jaxbContext.createUnmarshaller()).thenReturn(unmarshaller);
@@ -106,13 +99,6 @@ import static org.mockito.Mockito.when;
         } catch (JAXBException | MalformedURLException e) {
             e.printStackTrace();
         }
-    }
-
-    @Test void getFeedDataWhenConfigDisabled() throws NoSuchFieldException {
-        boolean isEnabled = false;
-        PrivateAccessor.setField(this.feedFetchService, "isEnabled", isEnabled);
-        feedFetchService.getFeedData("https://sports.ndtv.com/rss/football", 10);
-        assertEquals(0, feedFetchService.getFeedData("https://sports.ndtv.com/rss/football", 10).size());
     }
 
     private List<Item> setList() {

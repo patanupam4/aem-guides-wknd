@@ -8,6 +8,9 @@
 * Tested with Feed - https://sports.ndtv.com/rss/cricket & https://sports.ndtv.com/rss/football
 * From the Manual field in case date is not provided, the _**fallback is current date**_
 * Default Sonar check has been done on Custom code
+* Overlaid /libs/wcm/core/resources/languages node to add more language under /apps and added the path in **Day CQ WCM Language Manager**, which is part of this repository
+* The **MSM Package** is kept under **distribution** as msm-wknd.zip
+
 
 ## Modules
 
@@ -17,7 +20,7 @@ The main parts of the template are:
 * it.tests: Java based integration tests
 * ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, and templates
 * ui.content: contains sample content using the components from the ui.apps
-* ui.config: contains runmode specific OSGi configs for the project
+* ui.config: contains run-mode specific OSGi configs for the project
 * ui.frontend: an optional dedicated front-end build mechanism (Angular, React or general Webpack project)
 * ui.tests: Selenium based UI tests
 * all: a single content package that embeds all of the compiled modules (bundles and content packages) including any vendor dependencies
