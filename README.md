@@ -5,6 +5,7 @@
 * The Manual fallback content is also authored (Dummy Content) if Rss Feed URL is invalid, more data can be added to the Multi field on the component
 * Number of items needed to be displayed in the component is configurable
 * I have used JAXB Framework which comes as part of JDK to convert the XML into Separate Objects (as POJOs) i.e. Rss, Channel, etc.
+* Basic Styling has been done via the ui.frontend package and rest is taken as part of the WKND Project.
 * Junit has been covered - 80% +
 * Tested with Feed - https://sports.ndtv.com/rss/cricket & https://sports.ndtv.com/rss/football
 * From the Manual field in case date is not provided, the _**fallback is current date**_
