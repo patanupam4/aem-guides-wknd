@@ -4,6 +4,7 @@
 * The **RSS Feed Page** is part of the project (_http://localhost:4502/content/wknd/us/en/rss-feed.html?wcmmode=disabled_) and has been created using the OOTB We Retail Website.
 * The Manual fallback content is also authored (Dummy Content) if Rss Feed URL is invalid, more data can be added to the Multi field on the component
 * Number of items needed to be displayed in the component is configurable
+* I have used JAXB Framework which comes as part of JDK to convert the XML into Separate Objects (as POJOs) i.e. Rss, Channel, etc.
 * Junit has been covered - 80% +
 * Tested with Feed - https://sports.ndtv.com/rss/cricket & https://sports.ndtv.com/rss/football
 * From the Manual field in case date is not provided, the _**fallback is current date**_
