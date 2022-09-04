@@ -4,6 +4,7 @@
 footer.experiencefragment {
     padding: .5em 1em;
     border-top: 1px solid $color-foreground;
+    background-color: #4d148c;
 
     @media (prefers-color-scheme: dark) {
         border-color: $color-foreground-dark;
@@ -12,5 +13,9 @@ footer.experiencefragment {
     .cmp-separator__horizontal-rule {
         margin: 0;
         border: 0;
+    }
+    div.text {
+        color: #fff;
+        font-size: 14px;
     }
 }

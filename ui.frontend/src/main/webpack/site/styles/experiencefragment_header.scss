@@ -4,6 +4,7 @@
 header.experiencefragment {
     padding: .5em 1em;
     border-bottom: 1px solid $color-foreground;
+    background-color: #4d148c;
 
     @media (prefers-color-scheme: dark) {
         border-bottom-color: $color-foreground-dark;
@@ -53,6 +54,8 @@ header.experiencefragment {
     }
     .cmp-navigation__item-link {
         display: block;
+        color: #fff;
+        font-size: 14px;
     }
     .cmp-navigation__item--active > .cmp-navigation__item-link {
         font-weight: bold;
@@ -101,10 +104,14 @@ header.experiencefragment {
         margin: 0;
         padding: 0;
         list-style: none;
+        color: #fff;
+        font-size: 14px;
     }
     .cmp-languagenavigation__item-title {
         font-size: x-small;
         text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
     }
     .cmp-languagenavigation__item--level-0 {
         margin-bottom: .5em;
@@ -117,6 +124,8 @@ header.experiencefragment {
     }
     .cmp-languagenavigation__item--active > .cmp-languagenavigation__item-link {
         font-weight: bold;
+        color: #fff;
+        font-size: 14px;
     }
 
     //== Search

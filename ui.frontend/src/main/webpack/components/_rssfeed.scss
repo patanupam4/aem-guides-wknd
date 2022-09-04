@@ -1,10 +1,14 @@
 .rssfeed {
 	.rssfeed-info {
 		.feeditem {
-			background-color: black;
-			border: 15px solid red;
-			padding: 50px;
-			margin: 20px;
+			background-color: #F8F8FF;
+			border: 7px #ff6200;
+			padding: 25px;
+			margin: 42px;
+
+			.cmp-rssfeed-click {
+			    color : #ff6200;
+			}
 		}
 	}
 }
